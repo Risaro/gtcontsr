@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/main-r458.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/r458/main.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/main-r458-2.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/r458-2/main.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/main-r449-2.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/r449-2/main.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/userAccount-r458.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/r458/components/misc/userAccount/userAccount.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/userAccount-r458-2.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/r458-2/components/misc/userAccount/userAccount.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/userAccount-r449-2.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/r449-2/components/misc/userAccount/userAccount.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "content-security-policy",
+          "operation": "remove"
+        },
+        {
+          "header": "content-security-policy-report-only",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "https://editor.construct.net/*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  }
+]

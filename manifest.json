@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Construct 3 Universal Auto",
+  "version": "2.0.1",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "description": "extension for Construct 3 Editor Liksa https://t.me/lik1sa",
+  "permissions": [
+    "storage",
+    "debugger",
+    "activeTab",
+    "scripting",
+    "declarativeNetRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*/*",
+    "https://editor.construct.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://editor.construct.net/*"],
+    "js": ["versiones.js", "content.js"],
+    "run_at": "document_start"
+  }],
+  "web_accessible_resources": [{
+    "resources": [
+      "modifier.js",
+      "main-r458.js",
+      "main-r458-2.js",
+      "main-r449-2.js",
+      "userAccount-r458.js",
+      "userAccount-r458-2.js",
+      "userAccount-r449-2.js"
+    ],
+    "matches": ["*://editor.construct.net/*"]
+  }],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}
